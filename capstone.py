@@ -601,7 +601,7 @@ plt.figure(figsize=(5,4))
 sns.heatmap(cm_wide_and_deep, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
-plt.title('Confusion Matrix Model Logistic Regression')
+plt.title('Confusion Matrix Model Wide & Deep')
 plt.show()
 
 """# Membangun Model Rekomendasi
