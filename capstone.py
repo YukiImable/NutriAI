@@ -758,3 +758,7 @@ model_wide_and_deep.save("modelwide_and_deep.h5")
 """Menyimpan daftar semua library Python yang terpasang beserta versinya ke file requirements.txt."""
 
 !pip freeze > requirements.txt
+
+import joblib
+
+joblib.dump(minmax_scaler, 'scaler_diabetes.pkl')
