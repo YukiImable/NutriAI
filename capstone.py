@@ -745,20 +745,10 @@ model_logistic_regression.save("model_logistic_regression.h5")
 
 model_wide_and_deep.save("modelwide_and_deep.h5")
 
-"""Install tensorflowjs"""
-
-!pip install tensorflowjs
-
-"""Konversi Model ke Tensorflow JS"""
-
-!tensorflowjs_converter --input_format=keras model_neural_network.h5 tfjs_model_neural_network
-!tensorflowjs_converter --input_format=keras model_logistic_regression.h5 tfjs_model_logistic_regression
-!tensorflowjs_converter --input_format=keras modelwide_and_deep.h5 tfjs_model_wide_and_deep
-
 """Menyimpan daftar semua library Python yang terpasang beserta versinya ke file requirements.txt."""
 
 !pip freeze > requirements.txt
 
 import joblib
 
-joblib.dump(minmax_scaler, 'scaler_diabetes.pkl')
+joblib.dump(minmax_scaler, 'scaler_minmax.pkl')
