@@ -750,5 +750,21 @@ model_wide_and_deep.save("modelwide_and_deep.h5")
 !pip freeze > requirements.txt
 
 import joblib
+import json
 
-joblib.dump(minmax_scaler, 'scaler_minmax.pkl')
+# Simpan scaler
+joblib.dump(minmax_scaler, "scaler.pkl")
+
+# Simpan urutan fitur
+with open("feature_order.json", "w") as f:
+    json.dump(feature_order, f)
+
+# Simpan fitur numerik
+with open("numerical_features.json", "w") as f:
+    json.dump(numerical_features, f)
+
+# Simpan centroid KMeans
+joblib.dump(kmeans_model.cluster_centers_, "kmeans_centroids.pkl")
+
+# Simpan fitur numerik untuk rekomendasi (non-demografis)
+joblib.dump(numerical_features2, "numerical_features_rec.pkl")
