@@ -344,33 +344,37 @@ Pada proyek analisis prediksi diabetes ini, kami menggunakan empat metrik utama 
 
 ### Metrik Evaluasi dan Formula
 
-1. Accuracy
+1. **Accuracy**
 
-- Mengukur proporsi prediksi yang benar dari keseluruhan sampel.
-  $$
-  Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
-  $$
+   Mengukur proporsi prediksi yang benar dari keseluruhan sampel.
 
-2. Precision
+   $$
+   \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+   $$
 
-- Mengukur seberapa banyak prediksi positif yang benar dari seluruh prediksi positif.
-  $$
-  Precision = \frac{TP}{TP + FP}
-  $$
+2. **Precision**
 
-3. Recall (Sensitivity)
+   Mengukur seberapa banyak prediksi positif yang benar dari seluruh prediksi positif.
 
-- Mengukur seberapa banyak sampel positif yang berhasil ditangkap dari seluruh sampel positif sebenarnya.
-  $$
-  Recall = \frac{TP}{TP + FN}
-  $$
+   $$
+   \text{Precision} = \frac{TP}{TP + FP}
+   $$
 
-4. F1-Score
+3. **Recall (Sensitivity)**
 
-- Harmonik rata-rata antara precision dan recall, memberikan satu angka ringkasan yang menyeimbangkan keduanya.
-  $$
-  F1-Score = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-  $$
+   Mengukur seberapa banyak sampel positif yang berhasil ditangkap dari seluruh sampel positif sebenarnya.
+
+   $$
+   \text{Recall} = \frac{TP}{TP + FN}
+   $$
+
+4. **F1-Score**
+
+   Harmonik rata-rata antara precision dan recall, memberikan satu angka ringkasan.
+
+   $$
+   \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+   $$
 
 Keterangan:
 
